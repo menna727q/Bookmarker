@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet " href="css/all.min.css">
+    
+    <title>Bookmark</title>
+</head>
+<body>
+     <main class="position-relative">
+     <div class="container">
+        <div class="heading1 text-center">
+            <h1 class="mt-5 display-4 d-inline-flex">
+                Bookmarker
+            </h1>
+        </div>
+        <div class="body-mark d-flex align-items-center justify-content-center mt-5 flex-column ">
+            <div class="heading"> 
+              <h2 class="fs-4 mt-4">
+                 <i class="fa-solid fa-bookmark"></i>
+                   Bookmark your favorite sites 
+                  <i class="fa-solid fa-bookmark"></i>
+              </h2>
+            </div>
+             <div class="form d-flex justify-content-center flex-column w-100 ">
+                 <label for="sitename " class="mb-2 fw-semibold">
+                     <i class="fa-solid fa-book-bookmark"></i>
+                     Site Name
+                 </label>
+                 <input type="text" id="sitename" name="Bookmark" placeholder="Bookmark Name" class="mb-4 p-1 rounded-1">
+                 <label for="siteurl " class="mb-2 fw-semibold">
+                    <i class="fa-solid fa-link"></i>
+                    Site URL
+                </label>
+                <input type="url" id="siteurl" name="Bookmark" placeholder="Website URL" class="mb-4 p-1 rounded-1">
+                
+            </div>
+            <button class="mb-3 rounded-3 submit " onclick="addinformation();" >Submit</button>
+            
+            </div>
+            <table class=" table mt-4 bg-light text-center w-100 ">
+                <thead>
+                   <tr> 
+                    <th>Index</th>
+                    <th> Website Name</th>
+                    <th>Visit</th>
+                      <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody">
+                    
+                </tbody>
+             </table>
+            
+     </div>
+     <div class="alert-box bg-light rounded-2   p-4 position-absolute d-none ">
+        <div class="header d-flex align-items-center justify-content-between ">
+            <div class="icons mt-3 ms-3 ">
+                <span><i class="fa-solid fa-circle" style="color: #f15f5d;"></i></span>
+                <span><i class="fa-solid fa-circle" style="color: #febe2e;"></i></span>
+                <span><i class="fa-solid fa-circle" style="color: #4db748;"></i></span>
+                
+            </div>
+            <button class="close-btn bg-light me-3 border-light" id="closebtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <p class="ms-3 mt-4 fw-bold fs-5 w-75" >
+            Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <div class="content-box">
+            <ul class="list-unstyled ms-3">
+                <li>
+                    <i class="fa-regular fa-circle-right"></i>
+                    <span>Site name must contain at least 3 characters</span>
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-right"></i>
+                   <span > Site URL must be a valid one</span>
+                </li>
+            </ul>
+        </div>
+
+     </div>
+     </main>
+
+
+
+
+
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+</body>
+</html>

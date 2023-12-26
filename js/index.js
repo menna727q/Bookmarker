@@ -32,10 +32,10 @@ if(localStorage.getItem('sites')!=null)
  }
 function display(arr){
  var box=``;
-  for(var i=1;i<arr.length;i++)
+  for(var i=0;i<arr.length;i++)
   {
     box+=`<tr>
-    <td>${i}</td>
+    <td>${i+1}</td>
     <td>${arr[i].name}</td>
     <td><button class="btn btn-warning"  onclick="visit(${i});">Visit</button></td>
     <td><button class="btn btn-warning" onclick="deleteSite(${i});">Delete</button></td>
@@ -51,12 +51,13 @@ function deleteSite(index){
 }
 
 function visit(index) {
-    var site = siteArray[index];
+    var siteindex = siteArray[index];
+    
     var httpsRegex = /^https?:\/\//;
-    if (httpsRegex.test(site.url)) {
+    if (httpsRegex.test(siteindex.siteurl)) {
       window.open(site.url);
     } else {
-      window.open(`https://${site.url}`);
+      window.open(`https://${siteindex.siteurl}`);
     }
   }
   var nameRegex=/^\w{3,}(\s+\w+)*$/;
